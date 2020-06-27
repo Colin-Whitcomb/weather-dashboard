@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -28,84 +29,74 @@
                 </label>
             </div>
         </div>
-                <div class="grid-x grid-padding-x">
-                    <div class="medium-6 cell">
-                        <textarea placeholder="Paradise"></textarea>
-                        <!-- Search Btn (with search icon) -->
+        <div class="grid-x grid-padding-x">
+            <div class="medium-6 cell">
+                <textarea placeholder="Paradise"></textarea>
+                <!-- Search Btn (with search icon) -->
 
-                        <div class="medium-6 cell">
-                            <button a href="#" class="button">Search</button>
-                        </div>
-                    </div>
+                <div class="medium-6 cell">
+                    <button a href="#" class="button" id="search">Search</button>
                 </div>
             </div>
-
         </div>
 
-   
 
-                <div class="grid-x grid-padding-x">
-                    <div class="small-12 cell">
-                        <div class="primary callout">
-                            <p><strong>This is a twelve cell section in a grid-x.</strong> Each of these includes a
-                                div.callout element so you can see where the cell are - it's not required at all for the
-                                grid.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-x grid-padding-x">
-                    <p class="small-2 cell">
-                        Date <br>
-                        Img <br>
+        <div class="grid-x grid-padding-x">
+            <div class="small-12 cell">
+                <div class="primary callout">
+                    <!-- Going to have to make these with identifiable ID's -->
+                    <p>
+                        Today's Date <br>
                         Temp <br>
-                        UV Index <br>
-                    </p>
-                    <p class="small-2 cell">
-                        Date <br>
-                        Img <br>
-                        Temp <br>
-                        UV Index <br>
-                    </p>
-                    <p class="small-2 cell">
-                        Date <br>
-                        Img <br>
-                        Temp <br>
-                        UV Index <br>
-                    </p>
-                    <p class="small-2 cell">
-                        Date <br>
-                        Img <br>
-                        Temp <br>
-                        UV Index <br>
-                    </p>
-                    <p class="small-2 cell">
-                        Date <br>
-                        Img <br>
-                        Temp <br>
-                        UV Index <br>
+                        Humidity <br>
+                        Wind Speed <br>
+                        UV Index
                     </p>
                 </div>
             </div>
         </div>
 
-        <!--Main Content Div width 8 -->
-
-        <!-- Child Div 1 - San Jose Default-->
-        <!-- Temp -->
-        <!-- Humidity -->
-        <!-- Wind Speed -->
-        <!-- UV Index -->
-
-        <!-- Child Div 2 - 5 Day forcast -->
-        <!-- <p>5 Day Forcast</p> -->
-        <!-- Row with 5 subdivisions, width 2 -->
-
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/foundation.min.js"></script>
-        <script>
-            $(document).foundation();
-        </script>
+        <div class="grid-x grid-padding-x">
+            <p class="small-2 cell">
+                Date <br>
+                Img <br>
+                Temp <br>
+                UV Index <br>
+            </p>
+            <p class="small-2 cell">
+                Date <br>
+                Img <br>
+                Temp <br>
+                UV Index <br>
+            </p>
+            <p class="small-2 cell">
+                Date <br>
+                Img <br>
+                Temp <br>
+                UV Index <br>
+            </p>
+            <p class="small-2 cell">
+                Date <br>
+                Img <br>
+                Temp <br>
+                UV Index <br>
+            </p>
+            <p class="small-2 cell">
+                Date <br>
+                Img <br>
+                Temp <br>
+                UV Index <br>
+            </p>
+        </div>
+    </div>
+<!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script> -->
+    <!-- <script>
+        $(document).foundation();
+    </script> -->
+    <script src="script.js"></script>
 </body>
 
 </html>
