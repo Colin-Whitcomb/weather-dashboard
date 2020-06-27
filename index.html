@@ -1,55 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <!-- If you delete this meta tag World War Z will become a reality -->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation 5</title>
-
-    <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
-    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- If you are using the gem version, you need this only -->
-    <link rel="stylesheet" href="css/app.css">
-
-    <script src="js/vendor/modernizr.js"></script>
-
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-
     <!-- Overarching Container -->
-
     <!-- "JumboTron" -->
 
-    <!-- Drop Down Div width 4 -->
-    <!-- <h3> Search for a City </h3> -->
-    <!-- Search Menu --> 
-    <!-- Search Btn (with search icon) -->
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <h1>Hello World!</h1>
+            </div>
+        </div>
 
-    <!-- Main Content Div width 8 -->
+        <!-- Search Menu -->
+        <div class="grid-x grid-padding-x">
+            <div class="large-4 medium-4 cell">
+                <label>
+                    <h3> Search for a City </h3>
+                </label>
+                <textarea placeholder="Paradise"></textarea>
+            </div>
+        </div>
 
-    <!-- Child Div 1 - San Jose Default-->
-    <!-- Temp -->
-    <!-- Humidity -->
-    <!-- Wind Speed -->
-    <!-- UV Index -->
+        <!-- Search Btn (with search icon) -->
+        <div class="large-4 medium-4 cell">
+            <p><a href="#" class="button">Simple Button</a><br /> </p>
+        </div>
+        <!-- Main Content Div width 8 -->
 
-    <!-- Child Div 2 - 5 Day forcast -->
-    <!-- <p>5 Day Forcast</p> -->
-    <!-- Row with 5 subdivisions, width 2 -->
+        <!-- Child Div 1 - San Jose Default-->
+        <!-- Temp -->
+        <!-- Humidity -->
+        <!-- Wind Speed -->
+        <!-- UV Index -->
 
+        <!-- Child Div 2 - 5 Day forcast -->
+        <!-- <p>5 Day Forcast</p> -->
+        <!-- Row with 5 subdivisions, width 2 -->
 
-
-
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
 </body>
 
 </html>
