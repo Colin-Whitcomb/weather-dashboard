@@ -5,6 +5,11 @@ $(document).ready(function () {
     // once search button is clicked, do the following work: 
     $("#search").on("click", function () {
         // event.preventDefault();
+        $('#currDayDiv').removeClass('hide');
+        $('#fiveDayDiv').removeClass('hide');
+
+
+
 
         // collect what has been written in the text area 
         var cityName = $(this).siblings("#textArea").val();
@@ -47,7 +52,7 @@ $(document).ready(function () {
                 var pointB = responseB;
                 $('#currentUV').text("Current UV: " + pointB[0].value);
 
-                // create conditional's for color change
+                // create conditional for color change
                 if (pointB[0].value < 6){
                     $('#currentUV').addClass('favorable');
                     $('#currentUV').removeClass('moderate');

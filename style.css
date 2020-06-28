@@ -54,6 +54,10 @@ abbr[title] {
   background-color: red;
 }
 
+.hide {
+  display: none;
+}
+
 b,
 strong {
   font-weight: bolder; }
