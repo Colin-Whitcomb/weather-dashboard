@@ -16,6 +16,7 @@ $(document).ready(function () {
         // check if we've collected it 
         console.log(cityName);
 
+
         var queryURLa = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=a1a1a30d32db2a10c854b322fa1094ec";
         // getting weather info
         $.ajax({
@@ -38,7 +39,6 @@ $(document).ready(function () {
             // using first response to find weather iconID 
             // putting that icon in current weather 
             var iconID = response.weather[0].icon;
-            console.log("This is the icon id = " +iconID); 
             var queryIcon = "https://openweathermap.org/img/wn/" + iconID + "@2x.png";
             $('#currWeatherIcon').attr("src", queryIcon);
 
@@ -47,8 +47,6 @@ $(document).ready(function () {
                 url: currentUV,
                 method: "GET"
             }).then(function (responseB) {
-                console.log(responseB);
-                console.log("hello!");
                 var pointB = responseB;
                 $('#currentUV').text("Current UV: " + pointB[0].value);
 
@@ -75,20 +73,17 @@ $(document).ready(function () {
 
            
         });
-        // // This will be for the 5 day forcast 
-        // // a1a1a30d32db2a10c854b322fa1094ec = API Key 
-        // var queryURLb = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=a1a1a30d32db2a10c854b322fa1094ec";
-        // // clear the text once they press search
-        // $.ajax({
-        //         url: queryURLb,
-        //         method: "GET"
-        //     }).then(function(response) {
-        //         console.log(response);
 
-        //         // store the city name in localstorage 
-        //         localStorage.setItem(cityName, cityName);
-        //         // clear text area
-        //         $('#textArea').val('');
-        //     });
+        // This will be for the 5 day forcast 
+        // a1a1a30d32db2a10c854b322fa1094ec = API Key 
+        var queryURLb = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=a1a1a30d32db2a10c854b322fa1094ec";
+        // clear the text once they press search
+        $.ajax({
+                url: queryURLb,
+                method: "GET"
+            }).then(function(responseC) {
+                console.log(responseC);
+
+            });
     });
 })
