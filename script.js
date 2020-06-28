@@ -76,7 +76,7 @@ $(document).ready(function () {
 
         // This will be for the 5 day forcast 
         // a1a1a30d32db2a10c854b322fa1094ec = API Key 
-        var queryURLb = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=a1a1a30d32db2a10c854b322fa1094ec";
+        var queryURLb = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&units=&appid=a1a1a30d32db2a10c854b322fa1094ec";
         // clear the text once they press search
         $.ajax({
                 url: queryURLb,
