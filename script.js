@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    
+
     // once search button is clicked, do the following work: 
     $("#search").on("click", function () {
         // event.preventDefault();
@@ -20,6 +22,7 @@ $(document).ready(function () {
             $('#currentTemp').text("Current temperature: " + response.main.temp);
             $('#currentHumidity').text("Current humidity: " + response.main.humidity);
             $('#currentWind').text("Current wind speed: " + response.wind.speed);
+            $('#currentDay').text(moment().format("dddd, MMMM Do YYYY"));
             // $('#currentUV').text("Current UV" + response. );
 
 
