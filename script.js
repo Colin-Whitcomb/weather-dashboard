@@ -9,28 +9,31 @@ $(document).ready(function () {
         // check if we've collected it 
         console.log(cityName);
 
-       var queryURLa =  "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=a1a1a30d32db2a10c854b322fa1094ec";
-       
-       $.ajax({
-        url: queryURLa,
-        method: "GET"
-    }).then(function(response) {
-        console.log(response);
-        $('#currentCity').text(response.name);
-        $('#currentTemp').text("Current temperature: " + response.main.temp);
+        var queryURLa = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=a1a1a30d32db2a10c854b322fa1094ec";
+
+        $.ajax({
+            url: queryURLa,
+            method: "GET"
+        }).then(function (response) {
+            console.log(response);
+            $('#currentCity').text(response.name);
+            $('#currentTemp').text("Current temperature: " + response.main.temp);
+            $('#currentHumidity').text("Current humidity: " + response.main.humidity);
+            $('#currentWind').text("Current wind speed: " + response.wind.speed);
+            // $('#currentUV').text("Current UV" + response. );
 
 
 
-        // store the city name in localstorage 
-        localStorage.setItem(cityName, cityName);
-        // clear text area
-        $('#textArea').val('');
+            // store the city name in localstorage 
+            localStorage.setItem(cityName, cityName);
+            // clear text area
+            $('#textArea').val('');
 
 
 
 
 
-    });
+        });
         // // This will be for the 5 day forcast 
         // // a1a1a30d32db2a10c854b322fa1094ec = API Key 
         // var queryURLb = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=a1a1a30d32db2a10c854b322fa1094ec";
@@ -40,7 +43,7 @@ $(document).ready(function () {
         //         method: "GET"
         //     }).then(function(response) {
         //         console.log(response);
-                
+
         //         // store the city name in localstorage 
         //         localStorage.setItem(cityName, cityName);
         //         // clear text area
