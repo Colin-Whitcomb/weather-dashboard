@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    
+
 
     // once search button is clicked, do the following work: 
     $("#search").on("click", function () {
@@ -23,19 +23,28 @@ $(document).ready(function () {
             $('#currentHumidity').text("Current humidity: " + response.main.humidity);
             $('#currentWind').text("Current wind speed: " + response.wind.speed);
             $('#currentDay').text(moment().format("dddd, MMMM Do YYYY"));
-            // $('#currentUV').text("Current UV" + response. );
 
+            // taking info from the first ajax grab
+            var lat = response.coord.lat;
+            var long = response.coord.lon;
+            var currentUV = "https://api.openweathermap.org/data/2.5/uvi/forecast?appid=a1a1a30d32db2a10c854b322fa1094ec&lat=" + lat + "&lon=" + long + "&cnt=1";
 
+            $.ajax({
+                url: currentUV,
+                method: "GET"
+            }).then(function (responseB) {
+                console.log(responseB);
+                console.log("hello!");
+                var pointB = responseB;
+                $('#currentUV').text("Current UV: " + pointB[0].value);
+    
+            
+                // store the city name in localstorage 
+                localStorage.setItem(cityName, cityName);
+                // clear text area
+                $('#textArea').val('');
 
-            // store the city name in localstorage 
-            localStorage.setItem(cityName, cityName);
-            // clear text area
-            $('#textArea').val('');
-
-
-
-
-
+            });
         });
         // // This will be for the 5 day forcast 
         // // a1a1a30d32db2a10c854b322fa1094ec = API Key 
