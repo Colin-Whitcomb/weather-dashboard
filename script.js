@@ -16,7 +16,11 @@ $(document).ready(function () {
         method: "GET"
     }).then(function(response) {
         console.log(response);
-        
+        $('#currentCity').text(response.name);
+        $('#currentTemp').text("Current temperature: " + response.main.temp);
+
+
+
         // store the city name in localstorage 
         localStorage.setItem(cityName, cityName);
         // clear text area
