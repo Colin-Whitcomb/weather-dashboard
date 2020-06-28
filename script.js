@@ -46,6 +46,21 @@ $(document).ready(function () {
                 console.log("hello!");
                 var pointB = responseB;
                 $('#currentUV').text("Current UV: " + pointB[0].value);
+
+                // create conditional's for color change
+                if (pointB[0].value < 6){
+                    $('#currentUV').addClass('favorable');
+                    $('#currentUV').removeClass('moderate');
+                    $('#currentUV').removeClass('severe');
+                } else if ((pointB[0].value > 5) && (pointB[0].value < 8)) {
+                    $('#currentUV').addClass('moderate');
+                    $('#currentUV').removeClass('severe');
+                    $('#currentUV').removeClass('favorable');
+                } else { 
+                    $('#currentUV').addClass('severe');
+                    $('#currentUV').removeClass('moderate');
+                    $('#currentUV').removeClass('favorable');
+                }
             });
             
                 // store the city name in localstorage 
