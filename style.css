@@ -16,6 +16,21 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%; }
 
+.header {
+  text-align: center;
+  background-color: rgb(67, 116, 189);
+  color: white;
+}
+
+.border {
+  border: black;
+  border-radius: 3%;
+}
+
+
+/* .search {
+  text-align: center;
+} */
 body {
   margin: 0; }
 

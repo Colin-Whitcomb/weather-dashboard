@@ -15,30 +15,33 @@
     <!-- "JumboTron" -->
 
     <div class="grid-container fluid">
-        <div class="grid-x grid-padding-x">
+        <div class="grid-x grid-padding-x header">
             <div class="small-12 cell">
                 <h1><strong>Weather Dashboard</strong></h1>
             </div>
         </div>
 
         <!-- Search Menu -->
-        <div class="grid-x grid-padding-x">
+        <div class="grid-x grid-padding-x grid-padding-y search">
             <div class="large-4 medium-4 cell">
                 <label>
-                    <h5> Search for a City </h5>
+                    <h5>Search for a City:</h5>
                 </label>
             </div>
         </div>
         <div class="grid-x grid-padding-x grid-padding-y">
-            <div class="small-6 cell">
-                <textarea placeholder="Paradise" id="textArea"></textarea>
-                <!-- Search Btn (with search icon) -->
-                <button a href="#" class="button" id="search">Search</button>
+            <div class="small-8 cell">
+                <div class="grid-x grid-padding-x">
+                    <div class="small-6 cell">
+                        <textarea placeholder="Paradise" id="textArea"></textarea>
+                        <button a href="#" class="button" id="search">Search</button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Current Day Tab -->
         <div class="grid-x grid-padding-x">
-            <div class="small-6 medium-9 cell">
+            <div class="small-6 medium-8 cell">
                 <div class="primary callout hide" id="currDayDiv">
                     <!-- Going to have to make these with identifiable ID's -->
                     <div class="grid-x grid-padding-x">
@@ -61,7 +64,7 @@
                 <div class="grid-x">
                     <h4>5-Day Forecast</h4>
                 </div>
-                <div class="grid-x grid-padding-x">
+                <div class="grid-x grid-padding-x border">
                     <div class="small-6 medium-2 cell">
                         <p id="date1Cal"> DD/M </p>
                         <img id="date1Icon"></img>

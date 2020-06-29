@@ -6,9 +6,6 @@ $(document).ready(function () {
         $('#currDayDiv').removeClass('hide');
         $('#fiveDayDiv').removeClass('hide');
 
-
-
-
         // collect what has been written in the text area 
         var cityName = $(this).siblings("#textArea").val();
         // check if we've collected it 
@@ -25,7 +22,7 @@ $(document).ready(function () {
             $('#currentCity').text(response.name);
             $('#currentTemp').text("Current temperature: " + response.main.temp + "\xB0F");
             $('#currentHumidity').text("Current humidity: " + response.main.humidity + "%");
-            $('#currentWind').text("Current wind speed: " + response.wind.speed);
+            $('#currentWind').text("Current wind speed: " + response.wind.speed + " MPH");
             $('#currentDay').text(moment().format("dddd, MMMM Do YYYY"));
 
             // Setting up variables for subsequent aJax calls.
@@ -83,7 +80,7 @@ $(document).ready(function () {
                 var queryIcon1 = "https://openweathermap.org/img/wn/" + date1Icon + "@2x.png";
                 $('#date1Icon').attr("src", queryIcon1);
                 // date
-                $('#date1Cal').text(moment().add(1, 'days').format("MMM Do, YYYY"));
+                $('#date1Cal').text(moment().add(1, 'days').format("MMMM Do, YYYY"));
 
                 // Day Two
                 // temp/humidity
@@ -94,7 +91,7 @@ $(document).ready(function () {
                 var queryIcon2 = "https://openweathermap.org/img/wn/" + date2Icon + "@2x.png";
                 $('#date2Icon').attr("src", queryIcon2);
                 // date
-                $('#date2Cal').text(moment().add(2, 'days').format("MMM Do, YYYY"));
+                $('#date2Cal').text(moment().add(2, 'days').format("MMMM Do, YYYY"));
 
                 // Day Three
                 // temp/humidity
@@ -105,7 +102,7 @@ $(document).ready(function () {
                 var queryIcon3 = "https://openweathermap.org/img/wn/" + date3Icon + "@2x.png";
                 $('#date3Icon').attr("src", queryIcon3);
                 // date
-                $('#date3Cal').text(moment().add(3, 'days').format("MMM Do, YYYY"));
+                $('#date3Cal').text(moment().add(3, 'days').format("MMMM Do, YYYY"));
 
                 // Day Four
                 // temp/humidity
@@ -116,7 +113,7 @@ $(document).ready(function () {
                 var queryIcon4 = "https://openweathermap.org/img/wn/" + date4Icon + "@2x.png";
                 $('#date4Icon').attr("src", queryIcon4);
                 // date
-                $('#date4Cal').text(moment().add(4, 'days').format("MMM Do, YYYY"));
+                $('#date4Cal').text(moment().add(4, 'days').format("MMMM Do, YYYY"));
 
                 // Day Five
                 // temp/humidity
@@ -127,36 +124,13 @@ $(document).ready(function () {
                 var queryIcon5 = "https://openweathermap.org/img/wn/" + date5Icon + "@2x.png";
                 $('#date5Icon').attr("src", queryIcon5);
                 // date
-                $('#date5Cal').text(moment().add(5, 'days').format("MMM Do, YYYY"));
+                $('#date5Cal').text(moment().add(5, 'days').format("MMMM Do, YYYY"));
 
-
-            }, )
+            })
         });
         // store the city name in localstorage 
         localStorage.setItem(cityName, cityName);
         // clear text area
         $('#textArea').val('');
-
-        // // This will be for the 5 day forcast 
-        // // a1a1a30d32db2a10c854b322fa1094ec = API Key 
-        // var queryURLb = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&units=&appid=a1a1a30d32db2a10c854b322fa1094ec";
-        // // clear the text once they press search
-        // $.ajax({
-        //         url: queryURLb,
-        //         method: "GET"
-        //     }).then(function(responseC) {
-        //         console.log(responseC);
-        //         console.log(responseC.list[i]);
-
-        //         // var indexesC = responseC.list[i];
-        //         // indexesC.each(function () {
-        //         // console.log("Test 4");
-        //         // console.log(indexesC);
-
-        //         })
-
-        //         $('#date1').text(responseC.list[0].dt_txt);
-
-        // });
     });
 })
