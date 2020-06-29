@@ -83,7 +83,7 @@ $(document).ready(function () {
                 var queryIcon1 = "https://openweathermap.org/img/wn/" + date1Icon + "@2x.png";
                 $('#date1Icon').attr("src", queryIcon1);
                 // date
-                $('#date1Cal').text(moment().add(1, 'days').format("MMM Do,  YYYY"));
+                $('#date1Cal').text(moment().add(1, 'days').format("MMM Do, YYYY"));
 
                 // Day Two
                 // temp/humidity
@@ -94,7 +94,7 @@ $(document).ready(function () {
                 var queryIcon2 = "https://openweathermap.org/img/wn/" + date2Icon + "@2x.png";
                 $('#date2Icon').attr("src", queryIcon2);
                 // date
-                $('#date2Cal').text(moment().add(2, 'days').format("MMM Do,  YYYY"));
+                $('#date2Cal').text(moment().add(2, 'days').format("MMM Do, YYYY"));
 
                 // Day Three
                 // temp/humidity
@@ -105,7 +105,29 @@ $(document).ready(function () {
                 var queryIcon3 = "https://openweathermap.org/img/wn/" + date3Icon + "@2x.png";
                 $('#date3Icon').attr("src", queryIcon3);
                 // date
-                $('#date3Cal').text(moment().add(3, 'days').format("MMM Do,  YYYY"));
+                $('#date3Cal').text(moment().add(3, 'days').format("MMM Do, YYYY"));
+
+                // Day Four
+                // temp/humidity
+                $('#date4Temp').text("Temperature: " + responseC.daily[4].temp.day);
+                $('#date4Hum').text("Humidity: " + responseC.daily[4].humidity);
+                // icon
+                var date4Icon = responseC.daily[4].weather[0].icon;
+                var queryIcon4 = "https://openweathermap.org/img/wn/" + date4Icon + "@2x.png";
+                $('#date4Icon').attr("src", queryIcon4);
+                // date
+                $('#date4Cal').text(moment().add(4, 'days').format("MMM Do, YYYY"));
+
+                // Day Five
+                // temp/humidity
+                $('#date5Temp').text("Temperature: " + responseC.daily[5].temp.day);
+                $('#date5Hum').text("Humidity: " + responseC.daily[5].humidity);
+                // icon
+                var date5Icon = responseC.daily[5].weather[0].icon;
+                var queryIcon5 = "https://openweathermap.org/img/wn/" + date5Icon + "@2x.png";
+                $('#date5Icon').attr("src", queryIcon5);
+                // date
+                $('#date5Cal').text(moment().add(5, 'days').format("MMM Do, YYYY"));
 
 
             }, )
