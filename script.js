@@ -3,14 +3,12 @@ $(document).ready(function () {
     // once search button is clicked, do the following work: 
     $("#search").on("click", function () {
         // event.preventDefault();
-        $('#currDayDiv').removeClass('hide');
-        $('#fiveDayDiv').removeClass('hide');
 
         // collect what has been written in the text area 
         var cityName = $(this).siblings("#textArea").val();
         // check if we've collected it 
-        console.log(cityName);
 
+        // runAgain(cityName) () {
 
         var queryURLa = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=a1a1a30d32db2a10c854b322fa1094ec";
         // getting weather info
@@ -126,11 +124,30 @@ $(document).ready(function () {
                 // date
                 $('#date5Cal').text(moment().add(5, 'days').format("MMMM Do, YYYY"));
 
+                // Shows output
+                $('#currDayDiv').removeClass('hide');
+                $('#fiveDayDiv').removeClass('hide');
             })
         });
         // store the city name in localstorage 
         localStorage.setItem(cityName, cityName);
         // clear text area
-        $('#textArea').val('');
-    });
-})
+        $('#textArea').val('')
+
+        var citiesSearched = $("<button>"); // creates new p tag
+        citiesSearched.attr('id', 'city'); // gives class of city to new p tag
+        citiesSearched.text(cityName); // Writes the name of the searched city in the p tag
+        $('#putCityHere').append(citiesSearched); // put new btn on page to id of areaToAddTo
+
+        // when you click on the new buttons 
+        $("#city").on("click", function () {
+            var cityName2 = val(this).text;
+            console.log(cityName2);
+            // var cityName = CityName2
+            // runAgain (cityName);
+        });
+
+
+    })
+    // }
+});
