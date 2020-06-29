@@ -72,6 +72,16 @@ $(document).ready(function () {
                                 method: "GET"
                             }).then(function (responseC) {
                                     console.log(responseC);
+                                // Day One
+                                // temp/humidity
+                                $('#date1Temp').text("Temperature: " + responseC.daily[1].temp.day);
+                                $('#date1Hum').text("Humidity: " + responseC.daily[1].humidity);
+                                // icon
+                                var date1Icon = responseC.daily[1].weather[0].icon;
+                                var queryIcon1 = "https://openweathermap.org/img/wn/" + date1Icon + "@2x.png";
+                                $('#date1Icon').attr("src", queryIcon1);
+                                // date
+                                $('#date1Cal').text(moment().add(1, 'days').format("MMM Do,  YYYY"));
                                 },
                             )
 
