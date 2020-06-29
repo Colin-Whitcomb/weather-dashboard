@@ -23,7 +23,7 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response);
             $('#currentCity').text(response.name);
-            $('#currentTemp').text("Current temperature: " + response.main.temp);
+            $('#currentTemp').text("Current temperature: " + response.main.temp + "\xB0F");
             $('#currentHumidity').text("Current humidity: " + response.main.humidity);
             $('#currentWind').text("Current wind speed: " + response.wind.speed);
             $('#currentDay').text(moment().format("dddd, MMMM Do YYYY"));
@@ -76,7 +76,7 @@ $(document).ready(function () {
 
                 // Day One
                 // temp/humidity
-                $('#date1Temp').text("Temperature: " + responseC.daily[1].temp.day);
+                $('#date1Temp').text("Temperature: " + responseC.daily[1].temp.day + "\xB0F");
                 $('#date1Hum').text("Humidity: " + responseC.daily[1].humidity);
                 // icon
                 var date1Icon = responseC.daily[1].weather[0].icon;
@@ -87,7 +87,7 @@ $(document).ready(function () {
 
                 // Day Two
                 // temp/humidity
-                $('#date2Temp').text("Temperature: " + responseC.daily[2].temp.day);
+                $('#date2Temp').text("Temperature: " + responseC.daily[2].temp.day + "\xB0F");
                 $('#date2Hum').text("Humidity: " + responseC.daily[2].humidity);
                 // icon
                 var date2Icon = responseC.daily[2].weather[0].icon;
@@ -98,7 +98,7 @@ $(document).ready(function () {
 
                 // Day Three
                 // temp/humidity
-                $('#date3Temp').text("Temperature: " + responseC.daily[3].temp.day);
+                $('#date3Temp').text("Temperature: " + responseC.daily[3].temp.day + "\xB0F");
                 $('#date3Hum').text("Humidity: " + responseC.daily[3].humidity);
                 // icon
                 var date3Icon = responseC.daily[3].weather[0].icon;
@@ -109,7 +109,7 @@ $(document).ready(function () {
 
                 // Day Four
                 // temp/humidity
-                $('#date4Temp').text("Temperature: " + responseC.daily[4].temp.day);
+                $('#date4Temp').text("Temperature: " + responseC.daily[4].temp.day + "\xB0F");
                 $('#date4Hum').text("Humidity: " + responseC.daily[4].humidity);
                 // icon
                 var date4Icon = responseC.daily[4].weather[0].icon;
@@ -120,7 +120,7 @@ $(document).ready(function () {
 
                 // Day Five
                 // temp/humidity
-                $('#date5Temp').text("Temperature: " + responseC.daily[5].temp.day);
+                $('#date5Temp').text("Temperature: " + responseC.daily[5].temp.day + "\xB0 F");
                 $('#date5Hum').text("Humidity: " + responseC.daily[5].humidity);
                 // icon
                 var date5Icon = responseC.daily[5].weather[0].icon;
