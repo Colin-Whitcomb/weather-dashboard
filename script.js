@@ -64,6 +64,7 @@ $(document).ready(function () {
                 }
             });
 
+            // Five Day Forecast
             var queryDaily = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + long + "&units=imperial&exclude=current,minutely,hourly&appid=a1a1a30d32db2a10c854b322fa1094ec";
             console.log(queryDaily);
 
@@ -94,6 +95,17 @@ $(document).ready(function () {
                 $('#date2Icon').attr("src", queryIcon2);
                 // date
                 $('#date2Cal').text(moment().add(2, 'days').format("MMM Do,  YYYY"));
+
+                // Day Three
+                // temp/humidity
+                $('#date3Temp').text("Temperature: " + responseC.daily[3].temp.day);
+                $('#date3Hum').text("Humidity: " + responseC.daily[3].humidity);
+                // icon
+                var date3Icon = responseC.daily[3].weather[0].icon;
+                var queryIcon3 = "https://openweathermap.org/img/wn/" + date3Icon + "@2x.png";
+                $('#date3Icon').attr("src", queryIcon3);
+                // date
+                $('#date3Cal').text(moment().add(3, 'days').format("MMM Do,  YYYY"));
 
 
             }, )
