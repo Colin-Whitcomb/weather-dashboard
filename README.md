@@ -5,7 +5,7 @@
 ___
 ## Summary & Processs
 
-In this assignment our objective was to create a weather dashboard that would display current and future weather information and predictions. The current weather information had to include  temperature, humidity, wind speed and UV. The five day forecast displays similar yet condensed information. 
+In this assignment our objective was to create a weather dashboard that would display current and future weather information and predictions. The current weather information had to include  temperature, humidity, wind speed, and UV. The five day forecast displays similar yet condensed information. 
 
 My design process began by structuring basic HTML and CSS elements, layout, and style for the page; I used Zurb Foundation as a CSS framework. Next, I tackled the script.js file in order (top to bottom) of operations on the page. A majority of the assignment was spent creating accurate ajax calls to the  https://openweathermap.org/api and manipulating/populating the DOM with accurate information. 
 
@@ -14,23 +14,17 @@ After the operations were working well, I spent a little more time on styling ed
 ___
 ## Screenshots 
 
-1. **Current Date**
+
+1. **Screen Recording - Mobile**
+![Screenshot](assets/images/sr1.gif)
+
+2. **Top Display**
 
 ![Screenshot](assets/images/ss1.png)
 
-2. **Time blocks accept and store text**
+3. **5-Day Forecast**
 
 ![Screenshot](assets/images/ss2.png)
-
-3. 
-
-<video width="320" height="240" controls>
-  <source src="https://www.youtube.com/watch?v=sStAxVVw8K8" type="video/mp4">
-</video>
-
-<!-- [![Screen Recording]({assets/images/ss1.png})]({https://drive.google.com/file/d/1qtSEBq_DjHL71RYf6NQ0j3fWAdyzWvR3/preview} "Screen Recording"); -->
-
-<!-- <iframe src="https://drive.google.com/file/d/1qtSEBq_DjHL71RYf6NQ0j3fWAdyzWvR3/preview" width="640" height="480"></iframe> -->
 
 ___
 ## Technologies / Resources
