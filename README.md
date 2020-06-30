@@ -19,11 +19,9 @@ ___
 ![Screenshot](assets/images/sr1.gif)
 
 2. **Top Display**
-
 ![Screenshot](assets/images/ss1.png)
 
 3. **5-Day Forecast**
-
 ![Screenshot](assets/images/ss2.png)
 
 ___
