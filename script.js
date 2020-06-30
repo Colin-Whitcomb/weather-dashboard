@@ -60,29 +60,22 @@ $(document).ready(function () {
                 console.log(responseC);
 
                 // Day One
-                // temp/humidity
                 $('#date1Temp').text("Temperature: " + responseC.daily[1].temp.day + "\xB0F");
                 $('#date1Hum').text("Humidity: " + responseC.daily[1].humidity + "%");
-                // icon
                 var date1Icon = responseC.daily[1].weather[0].icon;
                 var queryIcon1 = "https://openweathermap.org/img/wn/" + date1Icon + "@2x.png";
                 $('#date1Icon').attr("src", queryIcon1);
-                // date
                 $('#date1Cal').text(moment().add(1, 'days').format("MMMM Do, YYYY"));
 
                 // Day Two
-                // temp/humidity
                 $('#date2Temp').text("Temperature: " + responseC.daily[2].temp.day + "\xB0F");
                 $('#date2Hum').text("Humidity: " + responseC.daily[2].humidity + "%");
-                // icon
                 var date2Icon = responseC.daily[2].weather[0].icon;
                 var queryIcon2 = "https://openweathermap.org/img/wn/" + date2Icon + "@2x.png";
                 $('#date2Icon').attr("src", queryIcon2);
-                // date
                 $('#date2Cal').text(moment().add(2, 'days').format("MMMM Do, YYYY"));
 
                 // Day Three
-                // temp/humidity
                 $('#date3Temp').text("Temperature: " + responseC.daily[3].temp.day + "\xB0F");
                 $('#date3Hum').text("Humidity: " + responseC.daily[3].humidity + "%");
                 // icon
@@ -93,31 +86,23 @@ $(document).ready(function () {
                 $('#date3Cal').text(moment().add(3, 'days').format("MMMM Do, YYYY"));
 
                 // Day Four
-                // temp/humidity
                 $('#date4Temp').text("Temperature: " + responseC.daily[4].temp.day + "\xB0F");
                 $('#date4Hum').text("Humidity: " + responseC.daily[4].humidity + "%");
-                // icon
                 var date4Icon = responseC.daily[4].weather[0].icon;
                 var queryIcon4 = "https://openweathermap.org/img/wn/" + date4Icon + "@2x.png";
                 $('#date4Icon').attr("src", queryIcon4);
-                // date
                 $('#date4Cal').text(moment().add(4, 'days').format("MMMM Do, YYYY"));
 
                 // Day Five
-                // temp/humidity
                 $('#date5Temp').text("Temperature: " + responseC.daily[5].temp.day + "\xB0 F");
                 $('#date5Hum').text("Humidity: " + responseC.daily[5].humidity + "%");
-                // icon
                 var date5Icon = responseC.daily[5].weather[0].icon;
                 var queryIcon5 = "https://openweathermap.org/img/wn/" + date5Icon + "@2x.png";
                 $('#date5Icon').attr("src", queryIcon5);
-                // date
                 $('#date5Cal').text(moment().add(5, 'days').format("MMMM Do, YYYY"));
 
-                // Puts city name in a list of cities 
-
-
-                // Shows output
+                $('#currDayDiv').removeClass('hide');
+                $('#fiveDayDiv').removeClass('hide');
 
             })
         });
@@ -125,14 +110,12 @@ $(document).ready(function () {
 
     // once search button is clicked, do the following work: 
     $("#search").on("click", function () {
-        // event.preventDefault();
+      
 
         // collect what has been written in the text area 
         var cityName = $(this).siblings("#textArea").val();
         runAgain(cityName);
         // check if we've collected it 
-        $('#currDayDiv').removeClass('hide');
-        $('#fiveDayDiv').removeClass('hide');
 
         // store the city name in localstorage 
         localStorage.setItem(cityName, cityName);

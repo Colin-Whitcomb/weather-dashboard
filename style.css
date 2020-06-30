@@ -22,11 +22,25 @@ html {
   color: white;
 }
 
+/* .box {
+border: black;
+background-color: blueviolet;
+} */
+
 .border {
   border: black;
   border-radius: 3%;
 }
 
+.top-div {
+  text-align: center;
+}
+
+.city {
+  padding: 2em;
+  text-align: center;
+  text-decoration: underline;
+}
 
 /* .search {
   text-align: center;

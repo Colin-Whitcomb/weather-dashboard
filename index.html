@@ -23,16 +23,16 @@
 
         <!-- Search Menu -->
         <div class="grid-x grid-padding-x grid-padding-y search">
-            <div class="large-4 medium-4 cell">
+            <div class="small 12 cell top-div">
                 <label>
                     <h5>Search for a City:</h5>
                 </label>
             </div>
         </div>
         <div class="grid-x grid-padding-x grid-padding-y">
-            <div class="small-8 cell">
-                <div class="grid-x grid-padding-x">
-                    <div class="small-6 cell" id="putCityHere">
+            <div class="small-12 cell">
+                <div class="grid-x grid-padding-x top-div">
+                    <div class="small-12 cell" id="putCityHere">
                         <textarea placeholder="Paradise" id="textArea"></textarea>
                         <button a href="#" class="button" id="search">Search</button>
                     </div>
@@ -41,19 +41,20 @@
         </div>
         <!-- Current Day Tab -->
         <div class="grid-x grid-padding-x">
-            <div class="small-6 medium-8 cell">
+            <div class="small-12 cell">
                 <div class="primary callout hide" id="currDayDiv">
                     <!-- Going to have to make these with identifiable ID's -->
                     <div class="grid-x grid-padding-x">
-                        <h3 class="small-12 medium-4 cell" id="currentCity"></h3>
+                        <h2 class="small-12 medium-4 cell" id="currentCity"></h2>
                         <h5 class="small-12 medium-4 cell" id="currentDay"></h5>
                         <img src="" class="small-12 medium-4 cell" id="currWeatherIcon"></img>
                     </div>
-
-                    <p id="currentTemp"></p>
-                    <p id='currentHumidity'></p>
-                    <p id="currentWind"></p>
-                    <p id="currentUV"></p>
+                    <div class="grid-x grid-padding-x">
+                        <p class="small-12  cell box" id="currentTemp"></p>
+                        <p class="small-12  cell box" id='currentHumidity'></p>
+                        <p class="small-12  cell box" id="currentWind"></p>
+                        <p class="small-12 medium-2 cell box" id="currentUV"></p>
+                    </div>
                 </div>
             </div>
         </div>
